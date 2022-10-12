@@ -1,0 +1,167 @@
+body {
+    background-color: #FFF1D5;
+    color: #373737;
+    overflow-x: hidden;
+    padding: 0 40px;
+}
+
+button {
+    background-color: #B49776;
+    color: whitesmoke;
+    border: 0;
+    border-radius: .2em;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #373737;
+}
+
+button:disabled:hover {
+    color: whitesmoke;
+}
+button:disabled {
+    background: gray;
+}
+
+th:hover {
+    color: #AF8B69;
+}
+
+td {
+    padding: 10px
+}
+
+.books-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.add-book-btn{
+    margin-bottom: 20px;
+}
+
+.book-preview {
+    background-color: white;
+    color: #AF8B69;
+    width: 20%;
+    margin: .5em;
+    border: 1px solid lightgray;
+    border-radius: .2em;
+    text-align: center;
+    padding: 5px;
+    min-width: 150px;
+}
+
+.book-preview .btn-remove {
+    float: right;
+}
+
+.book-preview img {
+    max-width: 100%;
+}
+
+.book-preview h5 {
+    font-size: 1.4em;
+    height: 25px;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.book-preview h6 span {
+    color: tomato;
+    font-size: 2em;
+}
+
+.book-filter {
+    background-color: #D5B9A0;
+    padding: 10px;
+    margin: 20px;
+}
+
+.filter-vendor-select {
+    text-transform: capitalize;
+}
+
+.book-filter hr {
+    margin: 30px;
+}
+
+.add-books {
+    display: block;
+}
+
+.pagin {
+    display: flex;
+}
+
+.modal {
+    background-color: rgb(124, 113, 99);
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 85vh;
+    min-width: 300px;
+    text-align: center;
+    overflow: auto;
+}
+
+.modal.open {
+    left: 65%;
+    transition: left .5s;
+}
+
+.modal h3 {
+    color: pink;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.modal h4 span {
+    color: pink;
+}
+
+.modal>p {
+    text-align: left;
+    overflow: auto;
+}
+
+.user-msg {
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: #111;
+    padding: 10px;
+}
+
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom .5s;
+}
+
+.header {
+    display: flex
+}
+
+.header>h1 {
+    width: -webkit-fill-available;
+    color: #B49776;
+}
+
+.layout-mode {
+    display: flex;
+    align-items: center;
+}
+
+.modal-rate {
+    display: flex;
+    margin: 10px;
+}
+
+.modal-rate > h5 {
+    margin: inherit;
+}

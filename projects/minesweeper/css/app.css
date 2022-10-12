@@ -1,0 +1,157 @@
+body {
+  color: white;
+  text-align: center;
+  background-image: url('../images/background.webp');
+  transition: 1s;
+}
+
+.dark-mode {
+  background-image: url('../images/background.webp');
+}
+
+.light-mode {
+  background-image: url('../images/background-light.jpg');
+}
+
+.header {
+  display: flex;
+}
+
+.restart {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.level-btn {
+  color: white;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  background: transparent;
+  border: 3px solid grey;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.level-btn:hover {
+  color: white;
+  background: transparent;
+  box-shadow: 0 0 50px #ffffff;
+  border-radius: 15px;
+}
+
+.mode-btn {
+  color: white;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 7px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+
+.mode-btn:hover {
+  background-color: rgb(145, 145, 145);
+  opacity: 0.5;
+}
+
+.bonus-btn {
+  color: white;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  background-color: rgb(43, 42, 42);
+  border: 3px solid grey;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.bonus-btn:hover {
+  background-color: rgb(71, 70, 70);
+}
+
+.table-game {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  overflow: auto;
+}
+
+.board-container {
+  width: 600px;
+}
+
+table {
+  margin: auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(43, 42, 42);
+  opacity: 0.8;
+}
+
+.cell:hover {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(61, 60, 60);
+}
+
+.shown {
+  background-color: rgb(99, 96, 96);
+}
+
+.shown:hover {
+  background-color: rgb(99, 96, 96);
+}
+
+.lives {
+  width: 200px;
+  margin: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer {
+  width: 200px;
+  font-size: 25px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+.marked-left {
+  width: 200px;
+  font-size: 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+
+.div-bonus {
+  width: 25%;
+}
+
+.hint-btn {
+  background-color: transparent;
+  font-size: xx-large;
+  border: none;
+}
+
+.msg {
+  position: fixed;
+  width: 99%;
+  top: 15%;
+  font-size: xxx-large;
+  text-shadow: black 0 -2px;
+}

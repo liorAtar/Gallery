@@ -26,14 +26,24 @@
 </head>
 
 <body id="page-top">
-  <div class="offcanvas-btn" onclick="openCanvas()">
+  <div class="offcanvas-btn contact-icon" onclick="openCanvas()">
     <i class="fa fa-comment" aria-hidden="true"></i>
   </div>
   <aside class="offcanvas-aside">
     <a href="./projects/touchTheNums/index.html"></a>
     <!-- Contact -->
-    <section>
-      <h4>Contact Me</h4>
+    <section id="contact">
+      <form>
+        <p class="p-contact">Your E-mail</p>
+        <input type="text" class="form-control contact-email" placeholder="name@example.com">
+        <p class="p-contact">Subject</p>
+        <input type="text" class="form-control contact-subject" placeholder="Type sobject here">
+        <p class="p-contact">Message Body</p>
+        <textarea class="form-control contact-msg" placeholder="Type message text here" style="height: 100px">
+        </textarea>
+        <p class="p-contact p-warning">'Please Fill All Fields!'</p>
+        <button class="btn btn-primary contact-submit" type="button" onclick="contact()">Submit</button>
+      </form>
     </section>
 
   </aside>
@@ -57,7 +67,7 @@
             <a class="nav-link js-scroll-trigger" href="#me">Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="javascript: openCanvas()">Contact</a>
           </li>
         </ul>
       </div>
@@ -82,7 +92,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading heading-one">Specialities</h2>
-          <h3 class="section-subheading text-color">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3 class="section-subheading text-color">E-Commerce || Responsive Design || Web Security</h3>
         </div>
       </div>
       <div class="row text-center">
@@ -92,9 +102,7 @@
             <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-color">Ecommerce, or electronic commerce, refers to transactions conducted via the internet. Every time individuals and companies are buying or selling products and services online they’re engaging in ecommerce. </p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -102,9 +110,7 @@
             <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-color">Responsive design is a graphic user interface (GUI) design approach used to create content that adjusts smoothly to various screen sizes.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -112,9 +118,7 @@
             <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Web Security</h4>
-          <p class="text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <p class="text-color">Web security is also known as “Cybersecurity”. It basically means protecting a website or web application by detecting, preventing and responding to cyber threats.</p>
         </div>
       </div>
     </div>
@@ -229,12 +233,12 @@
           <p class="text-color">Frontend Developer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/">
                 <i class="fa fa-twitter"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.facebook.com/">
                 <i class="fa fa-facebook"></i>
               </a>
             </li>
@@ -270,12 +274,12 @@
         <div class="col-md-4 flex-align-center">
           <ul class="list-inline social-buttons flex-align-center">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/">
                 <i class="fa fa-twitter"></i>
               </a>
             </li>
             <li class="list-inline-item flex-align-center">
-              <a href="#">
+              <a href="https://www.facebook.com/">
                 <i class="fa fa-facebook"></i>
               </a>
             </li>
@@ -306,7 +310,7 @@
   <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+        <div class="close-modal" data-dismiss="modal" onclick="closeModal()">
           <div class="lr">
             <div class="rl"></div>
           </div>

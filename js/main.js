@@ -40,20 +40,39 @@ function renderProjsModals(i) {
             <h2>${projs[i].name}</h2>
             <p class="item-intro text-muted">${projs[i].title}</p>
             <img class="img-fluid d-block mx-auto" src="img/portfolio/${projs[i].id}-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                    blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
-                    cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                Close Project</button>
+            <p>${projs[i].desc}</p>
+            <ul class="list-inline">
+                <li>Date: ${projs[i].publishedAt}</li>
+                <li>Client: ${projs[i].labels[0]}</li>
+                <li>Category: ${projs[i].labels[1]}</li>
+            </ul>
+            <a class="link-to-proj" href="${projs[i].url}">Link to project</a>
+            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fa fa-times"></i>
+                Close Project
+            </button>
         </div>`
 
     $('.modal-body').html(strHtml)
+
+    $('.contact-icon').hide()
+}
+
+function contact() {
+    const subject = $('.contact-subject').val()
+    const msg = $('.contact-msg').val()
+
+    if (subject && msg) {
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=liorat18@gmail.com&su=${subject}&body=${msg}`)
+        $('.contact-email').val('')
+        $('.contact-subject').val('')
+        $('.contact-msg').val('')
+    }
+    else $('.p-warning').show()
+
+}
+
+function closeModal() {
+    $('.contact-icon').show()
+    $('.p-warning').hide()
 }

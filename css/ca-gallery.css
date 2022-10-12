@@ -108,7 +108,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: antiquewhite;
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -344,7 +344,7 @@ header.masthead .intro-text .intro-heading {
     margin: 0 auto;
     padding: 25px;
     text-align: center;
-    background-color: white;
+    background-color: antiquewhite;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -771,21 +771,22 @@ ul.social-buttons li a:hover {
 .btn-primary.focus,
 .btn-primary:focus {
     color: #222222;
-    border-color: rosybrown;
+    border-color: rgb(154, 117, 117);
     background-color: rosybrown;
+    box-shadow:none;
 }
 
 .btn-primary:hover {
     color: #222222;
-    border-color: rosybrown;
-    background-color:rosybrown;
+    border-color: rgb(154, 117, 117);
+    background-color:rgb(154, 117, 117);
 }
 
 .btn-primary.active,
 .btn-primary:active,
 .open>.btn-primary.dropdown-toggle {
     color: #222222;
-    border-color: rosybrown;
+    border-color: rgb(154, 117, 117);
     background-color: rosybrown;
 }
 
@@ -799,8 +800,9 @@ ul.social-buttons li a:hover {
 .open>.btn-primary.dropdown-toggle:focus,
 .open>.btn-primary.dropdown-toggle:hover {
     color: #222222;
-    border-color: rosybrown;
+    border-color: rgb(154, 117, 117);
     background-color: rosybrown;
+    box-shadow:none;
 }
 
 .btn-primary.active,
@@ -927,4 +929,25 @@ fieldset[disabled] .btn-xl:hover {
 
 .my-name {
     color: rosybrown;
+}
+
+.link-to-proj {
+    color: rosybrown;
+    display: block;
+    margin: 20px;
+}
+
+.p-contact {
+    text-align: start !important;
+    margin: 10px 0px;
+}
+
+.contact-submit {
+    display: flex;
+    margin: 20px auto;
+}
+
+.p-warning {
+    color: darkred !important;
+    text-align: center !important;
 }

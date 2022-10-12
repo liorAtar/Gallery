@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Book Shop</title>
+</head>
+<body onload="onInit()">
+    <div class="header">
+        <h1>Book Shoop</h1>
+        <div class="layout-mode">
+            <button onclick="renderBooksByTable()">▤</button>
+            <button onclick="renderBooksByCards()">▦</button>
+        </div>
+    </div>
+    <section class="book-filter">
+        <h2>Filter</h2>
+        <label>
+            Search
+            <input class="search-filter" type="search" onchange="this.title=this.value;onSetFilterBy({searchValue: this.value})" />
+        </label>
+        <hr />
+        <div>
+            Sort by:
+            <select class="sort-by" onchange="onSetSortBy()">
+                <option value="">Select Sorting</option>
+                <option value="price">Max Price</option>
+                <option value="rate">Min Rate</option>
+            </select>
+            <label>
+                Descending
+                <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+            </label>
+        </div>
+    </section>
+    <button class="add-book-btn" title="Add Book" onclick="onAddBook()">Add Book</button>
+    <section class="books-container">
+        <div class="books-cards"></div>
+        <table class="books-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th onclick="onSort('name')">Title</th>
+                    <th onclick="onSort('price')">Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="books-tb">
+            </tbody>
+        </table>
+        <div class="pagin">
+            <button class="prev-btn" onclick="onPrevPage(this)" disabled><=</button>
+            <div class="pagin-numbers"></div>
+            <button class="next-btn" onclick="onNextPage(this)">=></button>
+        </div>
+    </section>
+    <section class="add-books">
+        <form onsubmit="onAddBook(event)">
+            <input name="name" class="name" type="text" placeholder="Enter Book Title"/>
+            <input name="price" class="price" type="number" placeholder="Enter Price"/>
+            <input name="img" class="img" type="text" placeholder="Enter Image Url"/>
+            <textarea name="desc" class="desc" rows="5" cols="80" placeholder="Enter Description" ></textarea> 
+            <button type="submit" class="add-book-btn" title="Add Book">Add Book</button>
+        </form>
+    </section>
+    <div class="modal">
+        <h3></h3>
+        <h4></h4>
+        <h5>Book Description</h5>
+        <p></p>
+        <div class="modal-rate">
+            <h5>Rate: </h4>
+            <button onclick="onLowerRate()">-</button>
+            <input name="rate-value" class="rate-value" type="number" min="1" max="10"/>
+            <button onclick="onAddRate()">+</button>
+        </div>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+</html>

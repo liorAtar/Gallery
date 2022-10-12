@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper game</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="initGame()">
+    <div class="header">
+        <div class="header-side">
+            <h2 class="timer">Timer 000</h2>
+            <h3 class="marked-left"></h3>
+        </div>
+        <img class="restart" onclick="restart()" src="./images/start.png"></img>
+        <div class="header-side">
+            <h2 class="lives"></h2>
+            <button class="mode-btn" onclick="changeMode(this)">LIGHT MODE</button>
+        </div>
+    </div>
+    <div class="levels">
+        <button class="level-btn" onclick="updateLevel(this)">EASY</button>
+        <button class="level-btn" onclick="updateLevel(this)">MEDIUM</button>
+        <button class="level-btn" onclick="updateLevel(this)">HARD</button>
+    </div>
+    <div class="table-game">
+        <div class="div-bonus">
+            <div class="safe">
+                <button class="bonus-btn safe-btn" onclick="safeClicked(this)">SAFE CLICK</button>
+                <p class="safe-left">Left: 3</p>
+            </div>
+        </div>
+        <div class="board-container"></div>
+        <div class="div-bonus">
+            <div class="hint">
+                <button class="hint-btn" onclick="hintClicked(this)">💡</button>
+                <button class="hint-btn" onclick="hintClicked(this)">💡</button>
+                <button class="hint-btn" onclick="hintClicked(this)">💡</button>
+            </div>
+        </div>
+    </div>
+    <h3 class="msg"></h3>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/hints.js"></script>
+</body>
+
+</html>
