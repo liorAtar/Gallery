@@ -34,10 +34,17 @@ section {
 }
 
 section h2.section-heading {
-    color: rosybrown;
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
+}
+
+.heading-one{
+    color: #222222;
+}
+
+.heading-two{
+    color: rosybrown;
 }
 
 section h3.section-subheading {
@@ -74,7 +81,7 @@ img::-moz-selection {
 }
 
 body {
-    -webkit-tap-highlight-color: antiquewhite;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .offcanvas-btn {
@@ -375,6 +382,7 @@ header.masthead .intro-text .intro-heading {
     border: none;
     border-radius: 0;
     background-clip: border-box;
+    background-color: antiquewhite;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -406,6 +414,11 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .modal-content button {
     cursor: pointer;
+    color: #222222;
+}
+
+.portfolio-modal .modal-content button:hover {
+    background-color: rgb(152, 118, 118);
 }
 
 .portfolio-modal .close-modal {
@@ -748,32 +761,32 @@ ul.social-buttons li a:hover {
 
 .btn-primary {
     font-weight: 700;
-    color: white;
-    border-color: antiquewhite;
-    background-color: antiquewhite;
+    color: #222222;
+    border-color: rosybrown;
+    background-color: rosybrown;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
-    color: white;
-    border-color: #b48b01;
-    background-color: #fec503;
+    color: #222222;
+    border-color: rosybrown;
+    background-color: rosybrown;
 }
 
 .btn-primary:hover {
-    color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    color: #222222;
+    border-color: rosybrown;
+    background-color:rosybrown;
 }
 
 .btn-primary.active,
 .btn-primary:active,
 .open>.btn-primary.dropdown-toggle {
-    color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    color: #222222;
+    border-color: rosybrown;
+    background-color: rosybrown;
 }
 
 .btn-primary.active.focus,
@@ -785,9 +798,9 @@ ul.social-buttons li a:hover {
 .open>.btn-primary.dropdown-toggle.focus,
 .open>.btn-primary.dropdown-toggle:focus,
 .open>.btn-primary.dropdown-toggle:hover {
-    color: white;
-    border-color: #b48b01;
-    background-color: #dcab01;
+    color: #222222;
+    border-color: rosybrown;
+    background-color: rosybrown;
 }
 
 .btn-primary.active,
